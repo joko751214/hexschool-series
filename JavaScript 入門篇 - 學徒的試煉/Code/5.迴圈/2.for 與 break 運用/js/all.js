@@ -21,14 +21,12 @@ var farms = [
 // 我要找一個農場，買50隻小雞
 var farmsTotal = farms.length;
 for(var i = 0;i<farmsTotal;i++){
-  console.log(i);
     if(farms[i].chick>50){
         console.log(farms[i].farmer+'的小雞剛好夠');
         farms[i].chick -= 50;
         console.log(farms[i].farmer+'的小雞剩下'+farms[i].chick)
         break;
     }
-  console.log(i);
 }
 console.log(farms[0].chick);
 
