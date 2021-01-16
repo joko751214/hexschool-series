@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 盡量避免汙染全域變數
+    var a = 1;
+    console.log(a);
+    // 查看window會發現有a這個變數
+    console.log(window);
+    for(var i=0; i<3; i++) {
+      console.log(i);
+    }
+    // 此時查看window會發現有i這個變數也被宣告到全域
+    console.log(window);
+  </script>
+</body>
+</html>
