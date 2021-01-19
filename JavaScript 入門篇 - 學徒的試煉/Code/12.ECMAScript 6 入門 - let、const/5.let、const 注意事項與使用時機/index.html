@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // let、const
+    // 不可犯的錯誤，特性介紹
+
+    /* 第一點 hoisting */
+    console.log(a);
+    // var 有 hoisting 的特性，會將a向上提升，所以上面打印結果為 undefined
+    // 但是如果將 var 改成 let、const就會報錯，因為 let、const沒有向上提升
+    var a = 3;
+    console.log(a);
+
+    /* 第二點 同個區塊上不能重複命名 */
+    let a = 1;
+    let a = 2;
+
+    /* 第三點 全域變數 window */
+    
+    // b 不會變成全域變數，查看 window 會發現找不到 b 這個變數
+    const b = 1;
+
+  </script>
+</body>
+</html>

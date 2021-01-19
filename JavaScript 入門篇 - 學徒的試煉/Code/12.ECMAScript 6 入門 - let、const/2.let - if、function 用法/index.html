@@ -7,9 +7,23 @@
 </head>
 <body>
   <script>
+    // let 與 const 用來宣告區塊裡的變數
+    // 區塊 = { }
+    if (3 > 2) {
+      // 這樣就會汙染到全域變數
+      // var a = 3;
+      // 改成 let 就不會
+      let a = 3;
+    }
+
+    // 範例
     var a = 0;
     function changeA() {
+      // 若是將這行拿掉的話，下面的 a = 1; 會吃到全域的變數
+      // 然後就會更動到全域變數的值
+      let a = 0;
       a = 1;
+      console.log(a);
     }
     changeA();
     console.log(a);

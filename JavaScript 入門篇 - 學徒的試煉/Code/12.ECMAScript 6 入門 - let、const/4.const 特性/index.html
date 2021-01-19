@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let a = 1;
+    a = 2;
+
+    // const 唯獨變數 - 不能去做修改
+    // 變數是不能被變更的
+    const b = 2;
+    b = 1;
+    console.log(b); // 這邊會發生錯誤
+
+    // 但是若是用 const 宣告的 object {}、array []，是可以去變更裡面的值的。
+    const obj = {
+      url : 'http://xxx.com'
+    };
+    // 使用 Object.freeze 就可以將 obj 的內容固定
+    Object.freeze(obj);
+    obj.url = 'http://www.yahoo.com.tw'
+    console.log(obj.url);
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="list">
+    <!-- <li><img src="logo.png" alt=""></li> -->
+  </ul>
+
+  <script>
+    const list = document.querySelector(".list");
+    const imgUrl = "logo.png";
+    
+    // vscode 有支援在 JS 裡面的 HTML emmet 效果
+    list.innerHTML = `li>img+h2`;
+  </script>
+</body>
+</html>

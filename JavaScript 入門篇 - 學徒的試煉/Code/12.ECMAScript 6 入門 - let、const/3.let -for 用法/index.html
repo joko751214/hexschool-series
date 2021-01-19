@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  
+  <script>
+    // 這邊使用 var 無形中將 i 變成了全域變數
+    // 改成 let 變數就只會存在區塊內
+    for(var i = 0; i < 3; i++) {
+      console.log(i);
+    }
+
+
+    
+    const listLen = document.querySelectorAll(".list li").length
+    console.log(listLen);
+    // 這邊的for循環若是使用 var 會導致 i 變成全域變數
+    // i 會變成最終的值 => 3，導致不論點選哪一個li，alert都會是 4(因為3+1)
+    for(var i = 0;i < listLen;i++) {
+      document.querySelectorAll(".list li")[i].addEventListener('click', function() {
+        alert(i+1);
+      })
+    }
+    // 解決的方法就是將 var 改成 let 即可，使用 let 宣告的話，變數 i 會重新去個別綁定
+  </script>
+</body>
+</html>
