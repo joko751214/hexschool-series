@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Latest Vue.js Commits</h1>
+    <ul>
+      <li v-for="repo in repos">
+        <a :href="repo.html_url">
+          {{repo.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="all.js"></script>
+</body>
+</html>

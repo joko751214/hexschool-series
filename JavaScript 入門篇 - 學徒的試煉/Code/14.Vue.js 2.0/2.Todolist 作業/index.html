@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="all.css">
+</head>
+<body>
+  <div id="app">
+    <input type="text" placeholder="請輸入代辦事項"
+    @keyup.enter="addTodo(newTodo)"
+    v-model="newTodo">
+    <h1>代辦事項</h1>
+    <ul>
+      <li v-for="(todo,index) in todos" :class = "{ active : todo.complete }" v-if="todo.show">
+        <input type="checkbox" :id=index :key=index v-model="todo.complete">
+        {{todo.content}}
+        <a href="#" @click.prevent="removeTodo(todo)">刪除</a>
+      </li>
+    </ul>
+    <button @click="finishAll">全部做完</button>
+    <button @click="show('all')">全部顯示</button>
+    <button @click="show('finish')">已完成</button>
+    <button @click="show()">未處理</button>
+    <pre>
+      {{todos}}
+    </pre>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="all.js"></script>
+</body>
+</html>
