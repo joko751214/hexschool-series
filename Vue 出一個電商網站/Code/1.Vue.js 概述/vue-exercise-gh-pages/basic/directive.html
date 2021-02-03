@@ -141,12 +141,13 @@
 <div class="alert alert-secondary">
   <ol class="mb-0">
     <li>透過指令(v-bind)的方式，將圖片加載於畫面之上</li>
+    <li>透過指令(v-bind)的方式，加入 img-fluid class 調整圖片大小</li>
   </ol>
 </div>
 
 
 <div id="app">
-  <img src="imgSrc" alt="">
+  <img :src="imgSrc" alt="" :class="className">
 </div>
 
 
@@ -154,7 +155,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    imgSrc: 'https://images.unsplash.com/photo-1479568933336-ea01829af8de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9926ef56492b20aea8508ed32ec6030&auto=format&fit=crop&w=2250&q=80'
+    imgSrc: 'https://images.unsplash.com/photo-1479568933336-ea01829af8de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9926ef56492b20aea8508ed32ec6030&auto=format&fit=crop&w=2250&q=80',
+    className: 'img-fluid'
   }
 })
 </script>
